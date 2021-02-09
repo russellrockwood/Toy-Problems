@@ -27,6 +27,35 @@ function persistence(num, count = 0) {
   
    //persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4
                           // and 4 has only one digit
+  
+  
+  </script>
+  <script>
+    /* Write a function that takes in a string of one or more words, 
+    and returns the same string, but with all five or more letter words reversed 
+    (Just like the name of this Kata).
+    Strings passed in will consist of only letters and spaces. 
+    Spaces will be included only when more than one word is present.
+    Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns 
+    "This is a test" spinWords( "This is another*/
+
+    function spinWords(words){
+      var words = words.split(' ')
+      var reversed = []
+
+      for (var i = 0; i < words.length; i++) {
+        var word = words[i];
+        if (word.length >= 5) {
+          word = word.split('').reverse().join('')
+        }   
+        reversed.push(word)
+      }
+      
+
+      return reversed.join(' ')
+    }
+
+    console.log(spinWords("Hey fellow warriors"))
   </script>
 </body>
 </html>
